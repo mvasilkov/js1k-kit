@@ -1,22 +1,18 @@
 var gulp = require('gulp');
-var closureCompiler = require('gulp-closure-compiler');
+var closureCompiler = require('google-closure-compiler').gulp();
 var browserSync = require('browser-sync').create();
 
 var regpack = require('./gulp-regpack');
 var shim = require('./gulp-shim');
 
 gulp.task('compress', function() {
-  var canvas = true;
+  var canvas_shim = true;
   var webgl = false;
   var audio = false
 
   return gulp.src('input.js')
     .pipe(closureCompiler({
-      compilerPath: 'bower_components/closure-compiler/compiler.jar',
-      fileName: 'build.js',
-      compilerFlags:{
-        compilation_level: 'ADVANCED_OPTIMIZATIONS',
-      }
+      compilation_level: 'ADVANCED'
     }))
     .pipe(regpack({
   		withMath: false,
@@ -35,7 +31,7 @@ gulp.task('compress', function() {
   		timeVariableName: ""
 		}))
     .pipe(shim({
-      canvas_shim: canvas,
+      canvas_shim: canvas_shim,
       webgl: webgl,
       max_width: 0,
       max_height: 0,

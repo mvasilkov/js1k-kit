@@ -1,4 +1,4 @@
-var regpack = require('RegPack');
+var regpack = require('regpack');
 var gutil = require('gulp-util');
 var through = require('through2');    // npm install --save through2
 

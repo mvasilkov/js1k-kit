@@ -1,14 +1,17 @@
 {
   "name": "js1k-kit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Ryan Speets <ryan@speets.ca>",
   "license": "ISC",
   "devDependencies": {
-    "RegPack": "git+https://github.com/Siorki/RegPack.git",
+    "regpack": "^5.0.0",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
-    "gulp-closure-compiler": "^0.4.0",
+    "google-closure-compiler": "^20170124.0.0",
     "gulp-livereload": "^3.8.1"
+  },
+  "scripts": {
+    "serve": "gulp serve"
   }
 }

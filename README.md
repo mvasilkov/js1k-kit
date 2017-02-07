@@ -5,7 +5,7 @@ compression for you.
 
 ## Instructions
 
-Clone the repository, and then do an `npm install` followed by a `bower install`
+Clone the repository, and then do an `npm install`
 
 Use `gulp serve` to have a browser pop up that'll minify and show your code
 running in the shim.
