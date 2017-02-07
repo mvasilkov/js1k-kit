@@ -7,5 +7,5 @@ compression for you.
 
 Clone the repository, and then do an `npm install`
 
-Use `gulp serve` to have a browser pop up that'll minify and show your code
+Use `npm run serve` to have a browser pop up that'll minify and show your code
 running in the shim.
