@@ -6,7 +6,7 @@ var regpack = require('./gulp-regpack');
 var shim = require('./gulp-shim');
 
 gulp.task('compress', function() {
-  var canvas_shim = true;
+  var canvas_shim = false;
   var webgl = false;
   var audio = false
 
@@ -30,6 +30,7 @@ gulp.task('compress', function() {
   		wrapInSetInterval: false,
   		timeVariableName: ""
 		}))
+    //.pipe(gulp.dest('dist'))
     .pipe(shim({
       canvas_shim: canvas_shim,
       webgl: webgl,
